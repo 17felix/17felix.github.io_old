@@ -1,0 +1,381 @@
+body {
+    background: #010001;
+    margin: 0;
+    padding-top: 52px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+.header{
+    max-width: 1230px;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;   
+}
+.list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    list-style: none;       /* must have to remove 'points' on the list */
+}
+.item-link {
+  position: relative;
+  font-weight: 400;
+  color: #808080;
+  text-decoration: none;
+  font-size: 12px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.item-link::after {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: #fff;
+  transition: 0.3s;
+  transform: scaleX(0);
+}
+.item-link:hover, 
+.secondary-nav .item-link:hover,
+.footer-nav .item-link:hover{
+  color: white;
+  transition: 0.3s;
+}
+.item-link:hover::after {
+  transform: scaleX(1);
+}
+.secondary-nav .item-link {
+    color: #808080;
+}
+.footer-nav .item-link {
+  color: #808080;
+}
+
+.main {
+    text-align: center;            /* working with text */
+    padding-top: 120px;
+    padding-bottom: 30px;
+
+}
+.title {
+    font-size: 64px;
+    line-height: 75px;
+    font-weight: 400;
+    margin-bottom: 26px;
+    margin-top: 0;
+}
+.description {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: center;
+    max-width: 268px;
+    margin: auto;
+}
+.description:after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 60px;
+    background-color: white;
+    margin: auto;
+    margin-top: 26px;
+}
+.video {
+    max-width: 1230px;
+    width: 90%;
+    margin: auto;
+    height: 750px;
+}
+.features {
+    max-width: 1230px;
+    width: 90%;
+    margin: auto;
+    padding: 50px 0;
+    position: relative;
+}
+.features-title {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 140%;
+    /* or 34px */
+    text-transform: uppercase;
+    margin-bottom: 45px;
+}
+.table{
+    margin-bottom: 220px;
+}
+.table-column {
+    width: 300px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 180%;
+}
+.faetures-text {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 29px; 
+    max-width: 450px;
+}
+
+.rocket {
+    position: absolute;
+    top: 100px;
+    right: 0;
+    z-index: 99;
+    max-width: 300px;
+}
+
+.footer {
+    padding: 130px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo {
+    max-width: 140px;
+    margin-bottom: 42px;
+}
+.footer-nav {
+    margin-bottom: 28px;
+}
+.footer-nav .item-link {
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.footer-text{
+    color: #808080;
+    font-size: 18px;
+    line-height: 21px;
+    text-decoration: none;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+.footer-link {
+    color: #808080;
+    font-size: 18px;
+    line-height: 21px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.footer-link:hover{
+  color: #fff;
+  transition: 0.3s;
+
+}
+.button-container {
+  min-width: 260px;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* .button {
+  padding: 20px 60px;
+  color: #fff;
+  border: 2px solid #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 6px;
+  text-decoration: none;
+
+
+  
+} */
+/* .button:hover {
+  background-color: white;
+  color: #010001;
+  transition: 0.6s; 
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+  border: 2px solid #ffa260;
+  color: #ffa260;
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+} */
+/* rename .button -> a */
+.button{
+  
+  position: relative;
+  color:#ffffff;
+  padding: 20px 60px;
+  letter-spacing: 4px;
+  text-transform:uppercase;
+  text-decoration:none;
+  box-shadow:0 5px 5px rgba(0,0,0,.2);
+  overflow:hidden;
+}
+.button:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* transform: translateY(0); */
+  bottom: 0 ;
+  width: 50%;
+  background: rgba(255,255,255,0.05);
+}
+.button:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  /* transform: scaleX(100%); */
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.4),transparent);
+  transition: 0.5s;
+  transition-delay: 0.3s;
+}
+.button:hover:after{
+  left: 100%;
+  /*Don't use left instead use transform: translateY don't use width use transform: scaleX 
+  it was in one comment below, but i couldn't understand what must me done 
+  ↓ do not work properly ↓
+   transform: translateY(100%); */
+
+}
+.button span {
+  position: absolute;
+  display: block;
+  transition: 0.3s ease;
+}
+.button span:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #fff;
+}
+.button:hover span:nth-child(1) {
+  width: 100%;
+  transform: translateX(100%);
+}
+.button span:nth-child(3) {
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 1px;
+  background: #fff;
+}
+.button:hover span:nth-child(3) {
+  width: 100%;
+  transform: translateX(-100%);
+}
+.button span:nth-child(2) {
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 0;
+  background: #fff;
+}
+.button:hover span:nth-child(2) {
+  height: 100%;
+  transform: translateY(100%);
+}
+.button span:nth-child(4) {
+  bottom: 0;
+  right: 0;
+  width: 1px;
+  height: 0;
+  background: #fff;
+}
+.button:hover span:nth-child(4) {
+  height: 100%;
+  transform: translateY(-100%);
+}
+
+@media (max-width: 960px) {
+  .rocket {
+    max-width: 230px;
+  }
+  .table-column {
+    width: 250px;
+  }
+}
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+  .header .logo {
+    margin-bottom: 20px;
+  }
+  .header .main-menu {
+    margin-bottom: 20px;
+  }
+  .secondary-nav {
+    margin-top: 5px;
+  }
+  .rocket{
+    max-width: 170px;
+  }
+  .video{
+    width: auto;
+    height: 550px;
+  }
+}
+@media (max-width: 576px) {
+  .rocket{
+    position: static;
+    margin-bottom: 30px;
+    max-width: 100px;
+    margin-left: 90px;
+  }
+  .table{
+    margin-bottom: 0;
+  }
+  .table-column{
+    font-size: 14px;
+    max-width: 150px;
+  }
+  .footer-nav .list{
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-nav .item{
+    margin-bottom: 10px;
+  }
+  .footer{
+    text-align: center;
+  }
+  .main{
+    padding-top: 50px;
+  }
+  .features{
+    padding-bottom: 0;
+  }
+  .faetures-text{
+    font-size: 14px;
+  }
+  .item-link, .description , .footer-nav .item-link, .footer-text, .footer-link {
+    font-size: 14px;
+  }
+  .title {
+    font-size: 50px;
+  }
+  .button {
+    padding: 15px;
+    min-width: 200px;
+    min-height: 50px;
+}
+}
+@media (max-width: 340px) {
+    .rocket {
+        min-width: 100px;
+    }
+    .table-column{
+      font-size: 12px;
+      max-width: 150px;
+    }
+    .faetures-text{
+      font-size: 12px;
+      max-width: 90%;
+    }
+    
+}
