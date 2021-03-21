@@ -1,0 +1,235 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background: #010202;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #ffffff;
+}
+.header {
+  width: 90%;
+  max-width: 1146px;
+  margin: auto;
+  padding: 56px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+.logo {
+  display: block; /* потому что .a нужна на весь .header*/
+}
+/* сделать шаблонным .avatar (возможность вставить картинку любого размера, центривроать) */
+.user-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: auto;
+}
+.user {
+  display: flex;
+  align-items: center;
+}
+.user-name {
+  font-size: 16px;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+/*Не удивляйся. Я везде поменял название .app на .container (Такое название лучше отражает суть этого класса) */
+.container {
+  background: linear-gradient(
+    90deg,
+    #010202 0%,
+    #010202 46%,
+    rgba(1, 2, 2, 0.2) 90.9%
+  ); /* меняем градиент чтобы вставить видео */
+  /*  background: linear-gradient(90deg, #010202 -2.88%, rgba(1, 2, 2, 0.2) 44.9%),
+  url('/img/cover-image.jpg') no-repeat center right;*/ /* вставил background с градиентом, без повторений */
+  /* background-size: 50%; */
+  min-height: 100vh;
+}
+
+.film {
+  width: 90%;
+  max-width: 1146px;
+  margin: auto;
+  padding-top: 7%; /* HomeWork #1 calculate 100%-header= ... */
+}
+.tags {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+/* ↓  как задать св-во для всех\каждых эл-ов в блоке?  ↓ */
+.tags > * {
+  margin-right: 15px;
+  opacity: 0.4;
+  color: #e5e5e5;
+  font-size: 16px;
+  line-height: 22px;
+}
+.age {
+  opacity: 0.5;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 2px;
+  padding: 1px 5px;
+}
+.description {
+  max-width: 460px;
+  margin-bottom: 36px;
+  font-size: 21px;
+  line-height: 29px;
+}
+.button-group {
+  display: flex;
+  align-items: center;
+}
+.button,
+.film__pre-order-submit {
+  padding: 10px 25px;
+  border-radius: 6px;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  line-height: 140%;
+  /* or 22px */
+  background: #2f2f2f;
+  margin-right: 15px;
+  cursor: pointer;
+  transition: 0.5s;
+  outline: none; /* убирать контур в Mozilla */
+  opacity: 0.9;
+}
+.button:hover {
+  background: #2f2f2f7e;
+  opacity: 1;
+}
+.button:active {
+  transition: 0.1s;
+  opacity: 0.8;
+}
+.button-primary,
+.film__pre-order-submit {
+  background: #ea6e20;
+}
+.button-primary:hover,
+.film__pre-order-submit:hover {
+  background: #ea6e20cc;
+}
+.button-primary:active,
+.film__pre-order-submit:active {
+  /* background: #ea6e20; */
+
+  transition: 0.1s;
+}
+
+/* fancybox myInline */
+.inline-wrapper:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+/* i have to work with display: inline-block; */
+.film__pre-order {
+  width: 350px;
+  border: 1px solid orange;
+  /* vertical-align: middle; */
+  /* text-align: center !important; */
+  color: #000;
+}
+.inline-wrapper {
+  text-align: center;
+}
+.film__pre-order-title,
+.film__pre-order-email,
+.film__pre-order-submit {
+  vertical-align: middle;
+  margin: 10px;
+}
+.button-text {
+  margin-left: 10px;
+  /* vertical-align: middle; */
+}
+
+@media (max-width: 1200px) {
+  /*Не удивляйся. Я везде поменял название .app на .container (Такое название лучше отражает суть этого класса) */
+  /* .container {     
+    background-size: 50%;
+  } */
+  /*Не удивляйся. Я везде поменял название .app на .container (Такое название лучше отражает суть этого класса) */
+  .container {
+    background: linear-gradient(
+      90deg,
+      #010202 0%,
+      #010202 55%,
+      rgba(1, 2, 2, 0.2) 90.9%
+    );
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    height: auto;
+    padding-bottom: 400px;
+    /* background-position: bottom center;        change, coz add video*/
+    background: url("/img/cover-image.jpg") no-repeat bottom center / 300px;
+  }
+  video {
+    display: none;
+  }
+  .film {
+    padding-top: 2%;
+  }
+  .description {
+    font-size: 16px;
+    max-width: 333px;
+  }
+  .button-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .button {
+    margin-bottom: 10px;
+  }
+  .film-logo {
+    max-width: 100%;
+  }
+}
+@media (max-width: 576px) {
+  .button-text,
+  .user-name {
+    display: none;
+  }
+  .container {
+    padding-bottom: 250px;
+  }
+  .container {
+    padding-bottom: 380px;
+    background-size: 300px;
+  }
+  .button-group {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+@media (max-width: 412px) {
+  .tags {
+    justify-content: space-around;
+  }
+  .description {
+    text-align: center;
+  }
+  .button-group {
+    justify-content: space-evenly;
+  }
+  .button-default {
+    margin-bottom: 10px;
+  }
+}
+/* how can add fire animation to the photo? */

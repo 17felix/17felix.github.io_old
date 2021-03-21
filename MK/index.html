@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Mortal Kombat - premiere 2021</title>
+  </head>
+  <body>
+    <div class="container" id="container">
+      <header class="header">
+        <a href="/" class="logo" rel="fancybox-button">
+          <img src="img/logo.svg" alt="Logo: KinoPuls" class="logo-image" />
+        </a>
+        <a href="/" class="user">
+          <span class="user-name">Garlic</span>
+          <img src="/img/garlicAvatar.jpg" alt="My avatar" class="user-photo" />
+        </a>
+      </header>
+
+      <section class="film">
+        <img src="/img/film-logo.svg" alt="Mortal Kombat" class="film-logo" />
+        <div class="tags">
+          <span class="date">2021</span>
+          <span class="genre">боевик, фэнтези, фантастика</span>
+          <span class="country">США</span>
+          <span class="age">18+</span>
+        </div>
+        <!-- /.tags -->
+        <p class="description">
+          Продолжение легендарного фильма из 90-х. Предстоит по-настоящему
+          смертельная битва, где останется только сильнейший
+        </p>
+        <div class="button-group">
+          <a class="button button-primary" data-fancybox href="#film__pre-order"
+            >Предзаказ фильма</a
+          >
+          <a
+            class="button button-default"
+            data-fancybox
+            href="https://www.youtube.com/watch?v=NYH2sLid0Zc"
+          >
+            <img src="/img/play.svg" alt="icon: play" class="button-icon" />
+            <span class="button-text">Смотреть трейлер</span>
+          </a>
+        </div>
+      </section>
+      <div class="inline-wrapper">
+        <form
+          class="film__pre-order"
+          id="film__pre-order"
+          style="display: none"
+          action="mailto:youremail@gmail.com"
+        >
+          <span class="film__pre-order-title"
+            >Enter your email for purchasing</span
+          >
+          <input
+            class="film__pre-order-email"
+            type="email"
+            autocomplete="all"
+            name=""
+            id=""
+            placeholder="Email"
+          />
+          <input
+            class="film__pre-order-submit"
+            type="submit"
+            href="mailto:youremail@gmail.com"
+            name=""
+            id=""
+            value="Предзаказ фильма"
+          />
+        </form>
+      </div>
+
+      <!-- film__pre-order -->
+    </div>
+
+    <!-- <main class="main">
+    <h1 hidden>Mortal combat promo</h1>
+    <div class="description">
+      <img src="/img/film-logo.svg" alt="MK movie-logo" class="description-logo">
+      <div class="tags">
+          <span class="tags-description">2021</span>
+          <span class="tags-description">боевик, фэнтези, фантастика</span>
+          <span class="tags-description">США</span>
+          <span class="tags-description">18+</span>
+      </div>
+      <span class="description-text">
+        Продолжение легендарного фильма из 90-х. <br>
+        Предстоит по-настоящему смертельная битва, <br>
+        где останется только сильнейший
+      </span>
+      <div class="description-btn">
+        <button type="button" class="buy">Предзаказ фильма</button>
+        <button type="button" class="trailer">Смотреть трейлер</button>
+      </div>
+
+      
+    </div>
+  </main> -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="/js/jquery.vide.min.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>
