@@ -160,10 +160,6 @@ a {
 
 @media (max-width: 1200px) {
   /*Не удивляйся. Я везде поменял название .app на .container (Такое название лучше отражает суть этого класса) */
-  /* .container {     
-    background-size: 50%;
-  } */
-  /*Не удивляйся. Я везде поменял название .app на .container (Такое название лучше отражает суть этого класса) */
   .container {
     background: linear-gradient(
       90deg,
@@ -178,7 +174,7 @@ a {
     height: auto;
     padding-bottom: 400px;
     /* background-position: bottom center;        change, coz add video*/
-    background: url("/img/cover-image.jpg") no-repeat bottom center / 300px;
+    background: url("https://17felix.github.io/MK/img/cover-image.jpg") no-repeat bottom center / 300px;
   }
   video {
     display: none;
