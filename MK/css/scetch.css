@@ -1,0 +1,91 @@
+/* my scetch(template) */
+/* === main section === */
+.main {
+  max-width: 1146px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 200px;
+  /* background: url(/img/cover-image.png);
+  background-repeat: no-repeat;
+  background-position: top left; */
+}
+.description-logo {
+  margin-bottom: 18px;
+}
+.tags {
+  display: flex;
+  /* перевод <li> в строку */
+  list-style: none;
+  margin-bottom: 10px;
+}
+.tags-description {
+  font-size: 16px;
+  color: #e5e5e5;
+  opacity: 0.4;
+  margin-right: 15px;
+}
+.tags :last-child {
+  /*обводка для 18+ через родителя |  вложенность - не очень хорошо (для БЭМ, но тут не БЭМ)  */
+  border: 1px solid #e5e5e5;
+  margin: 0;
+  padding: 1px 5px;
+  border-radius: 2px;
+}
+.description-text {
+  font-size: 21px;
+  line-height: 140%;
+}
+.description-btn {
+  margin-top: 36px;
+}
+.buy {
+  font-size: 16px;
+  line-height: 22px;
+  border: none;
+  background: #ea6e20;
+  border-radius: 6px;
+  padding: 10px 25px;
+  color: #fff;
+  margin-right: 15px;
+}
+.trailer {
+  font-size: 16px;
+  line-height: 22px;
+  border: none;
+  background: #2f2f2f;
+  border-radius: 6px;
+  padding: 10px 25px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+.trailer::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  transform: rotate(45deg);
+  display: block;
+  margin-right: 10px;
+  background: #ffffff;
+  border-radius: 3px;
+}
+
+/* === fancybox myInline === */
+/* i have to work with display: inline-block; */
+.film__pre-order {
+  /* position: absolute !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  top: 40%;
+  left: 45%; */
+  border: 1px solid orange;
+  width: 350px;
+  align-items: center;
+  justify-content: center;
+  /* vertical-align: middle; */
+  color: #000;
+}
