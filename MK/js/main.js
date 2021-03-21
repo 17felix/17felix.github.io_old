@@ -1,9 +1,9 @@
 $(document).ready(function () {
   $("#container").vide({
-    mp4: "video/video.mp4",
-    webm: "video/video.webm",
-    ogv: "video/video.ogv",
-    poster: "img/cover-image.jpg",
+    mp4: "https://17felix.github.io/MK/video/video.mp4",
+    webm: "https://17felix.github.io/MK/video/video.webm",
+    ogv: "https://17felix.github.io/MK/video/video.ogv",
+    poster: "https://17felix.github.io/MK/img/cover-image.jpg",
   });
 });
 
