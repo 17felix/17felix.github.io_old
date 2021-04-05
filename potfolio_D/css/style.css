@@ -68,7 +68,8 @@ body {
 
 /* Hero */
 .container {
-  background: #f5a05c url(https:/17felix.github.io/potfolio_D/img/BG-shape.svg);
+/*   background: #f5a05c url(https:/17felix.github.io/potfolio_D/img/BG-shape.svg); */
+  background: #f5a05c url(img/BG-shape.svg);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position-x: 500px;
